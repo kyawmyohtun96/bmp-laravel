@@ -7,6 +7,19 @@
     <title>product</title>
 </head>
 <body>
-    <h1>welcome product page</h1>
+
+    {{-- <ul>
+        @for ($i=0;$i<count($products);$i++)
+            <li>{{$products[$i]}}</li>
+        @endfor
+    </ul> --}}
+    <ul>
+        @foreach ($products as $key=>$product)
+            @if ($key==1)
+                <li>{{$key}}-{{$product}}</li>
+            @endif
+        @endforeach
+    </ul>
+
 </body>
 </html>

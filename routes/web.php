@@ -29,6 +29,4 @@ Route::get('products/{product_id}/shop/{shop_id}',[ProductController::class,'pro
 Route::get('shops',function(){
     return view("shops.shop");
 });
-Route::get('products',function(){
-    return view('product');
-});
+Route::get('products',[ProductController::class,'productList']);

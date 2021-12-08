@@ -30,3 +30,5 @@ Route::get('shops',function(){
     return view("shops.shop");
 });
 Route::get('products',[ProductController::class,'productList']);
+
+Route::post('api/promotions',[Controller::class,'showpromotion']);

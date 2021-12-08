@@ -13,13 +13,16 @@
             <li>{{$products[$i]}}</li>
         @endfor
     </ul> --}}
-    <ul>
+    {{-- <ul>
         @foreach ($products as $key=>$product)
             @if ($key==1)
                 <li>{{$key}}-{{$product}}</li>
             @endif
         @endforeach
-    </ul>
+    </ul> --}}
+
+    <h1>Hello {{$name}}</h1>
+    <h3>Your age is {{$age}}</h3>
 
 </body>
 </html>

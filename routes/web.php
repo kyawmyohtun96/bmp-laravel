@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about',[AboutController::class,'aboutPage']);
+Route::get('/about',[AboutController::class,'aboutPage'])->middleware('checkAge');
 
 Route::get('contact',[ContactController::class,'contactPage']);
 

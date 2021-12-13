@@ -17,10 +17,13 @@ use App\Http\Controllers\WebFrontend\ProductController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $products=[1,2,3,4,5,6];
+    return view('welcome')->with([
+        'data'=>$products
+    ]);
 });
 
-Route::get('/about',[AboutController::class,'aboutPage'])->middleware('checkAge');
+Route::get('/about',[AboutController::class,'aboutPage'])->name(name:'website.about');
 
 Route::get('contact',[ContactController::class,'contactPage']);
 
@@ -30,5 +33,6 @@ Route::get('shops',function(){
     return view("shops.shop");
 });
 Route::get('products',[ProductController::class,'productList']);
+Route::get('products/{product_id}',[ProductController::class,'productDetail']);
 
 Route::post('api/promotions',[Controller::class,'showpromotion']);

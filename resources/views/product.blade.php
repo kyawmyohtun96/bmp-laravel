@@ -21,8 +21,10 @@
         @endforeach
     </ul> --}}
 
-    <h1>Hello {{$name}}</h1>
-    <h3>Your age is {{$age}}</h3>
+    {{-- <h1>Hello {{$name}}</h1>
+    <h3>Your age is {{$age}}</h3> --}}
 
+
+    <h3>hello products</h3>
 </body>
 </html>

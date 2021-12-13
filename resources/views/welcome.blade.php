@@ -7,6 +7,11 @@
     <title>welcome</title>
 </head>
 <body>
-    hello world
+    <ul>
+        @foreach ($data as $key=>$product)
+            <li><a href="{{url('products/'.$product)}}">Product {{$key}}</a></li>
+        @endforeach
+
+    </ul>
 </body>
 </html>
